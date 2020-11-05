@@ -1,0 +1,111 @@
+
+<p>在此记录一下 <code class="highlighter-rouge">UIWebView</code> <code class="highlighter-rouge">WKWebView</code>  以免再忘记..</p>
+
+<ol>
+  <li>创建 <code class="highlighter-rouge">webView</code>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/// UIWebView的创建
+- (UIWebView *)webView {
+ if (!_webView) {
+     _webView = [[UIWebView alloc] init];
+     _webView.delegate = self;
+ }
+ return _webView;
+}
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 这个是 iOS 与 HTML 商定的方法名
+static NSString * const kAppShareAction = @"appShareMethod";
+
+- (WKWebView *)webView {
+    if (!_webView) {
+        WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+        // 在此可以添加过个 userContentController, 相当于多个方法, 可以在代理中区分
+        // name 对应的 HTML 中的 &lt;window.webkit.messageHandlers.&lt;#APP 中 MethodName#&gt;.postMessage(&lt;#json数据#&gt;)&gt;
+        [config.userContentController addScriptMessageHandler:self name:kAppShareAction];
+        
+        _webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:config];
+        // WKNavigationDelegate
+        // WebView 相关操作的协议
+        _webView.navigationDelegate = self;
+        // WKUIDelegate 
+        // UI相关的协议,如果没有需求可以不用设置
+        _webView.UIDelegate = self;
+    }
+}
+</code></pre></div></div>
+
+<ol>
+  <li>加载网页
+自己写的 <code class="highlighter-rouge">HTML</code> 测试页面
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (NSString *)htmlString {
+ NSString *head = [NSString stringWithFormat:@"<span class="nt">&lt;head&gt;&lt;title&gt;</span>title<span class="nt">&lt;/title&gt;&lt;/head&gt;</span>"];
+
+ NSString *button = @"<span class="nt">&lt;button</span> <span class="na">style=</span><span class="s">\"width:</span> <span class="na">100</span><span class="err">%;</span> <span class="na">height:</span> <span class="na">100px</span><span class="err">;\"</span> <span class="na">onclick=</span><span class="s">\"buttonClick()\"</span><span class="nt">&gt;</span>点击购买<span class="nt">&lt;/button&gt;</span>";
+
+ NSString *body = [NSString stringWithFormat:@"<span class="nt">&lt;body&gt;</span>%@<span class="nt">&lt;/body&gt;</span>", button];
+ // 获取 js 文件路径
+ NSString *jsPath = [NSBundle.mainBundle pathForResource:@"html" ofType:@"js"];
+ NSString *jsHtml = [NSString stringWithFormat:@"<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">\"%@\"</span><span class="nt">&gt;&lt;/script&gt;</span>", jsPath];
+
+ return [NSString stringWithFormat:@"<span class="nt">&lt;html&gt;</span>%@%@%@<span class="nt">&lt;/html&gt;</span>", head, body, jsHtml];
+}
+</code></pre></div>    </div>
+    <p>创建一个<code class="highlighter-rouge">js</code>文件,  快捷键 <code class="highlighter-rouge">command + n -&gt; other -&gt; Empty -&gt; html.js</code></p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function buttonClick() {
+ var json = '{"id":"666", "message":"我是传递的数据"}';
+ try {
+     window.webkit.messageHandlers.appMethod.postMessage(json)
+ } catch(error) {
+     console.log(error)
+ }
+}
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><code class="highlighter-rouge">UIWebView</code> <code class="highlighter-rouge">WKWebView</code> 加载网页类似
+ 我这里采用加载本地 <code class="highlighter-rouge">loadHTMLString:baseURL:</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 如果 HTMLString 中有用到本地文件需要获取本地文件路径
+NSString *jsPath = [NSBundle.mainBundle pathForResource:@"html" ofType:@"js"];
+// baseURL 中需要传入 js/css 文件路径, 若果传 nil, WebView在显示时会加载不出自己添加的 js/css 相关属性 
+[self.webView loadHTMLString:[self htmlString] baseURL:[NSURL fileURLWithPath:jsPath]];
+</code></pre></div></div>
+
+<p>使用 <code class="highlighter-rouge">loadRequest</code> 加载网页</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NSString *string = @"https://www.baidu.com";
+NSURL *url = [NSURL URLWithString:string];
+NSURLRequest *request = [NSURLRequest requestWithURL:url];
+[self.webView loadRequest:request];
+</code></pre></div></div>
+
+<ol>
+  <li>获取 <code class="highlighter-rouge">webView</code> 事件
+<code class="highlighter-rouge">WKWebView</code> 的 <code class="highlighter-rouge">WKNavigationDelegate</code> 代理方法获取 <code class="highlighter-rouge">webView</code> 事件
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/// message 中包含 事件名 name, 和对应的数据 body
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+ NSLog(@"name -&gt; %@ body -&gt; %@", message.name, message.body);
+ if ([message.name isEqualToString:kAppShareAction]) {
+     // TODO
+ }
+}
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><code class="highlighter-rouge">UIWebView</code> 的代理</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 在此可以拦截 webview 的跳转
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    NSLog(@"%@", request.URL.absoluteString);
+    NSString *aURL = request.URL.absoluteString;
+    // aURL: appName://appMethod
+    // appName: 可以替换为自己项目或公司名字
+    // appMethod: 对应的app方法
+    if ([aURL hasPrefix:@"appName://"]) {
+        // TODO
+        return NO;
+    }
+    return YES;
+}
+</code></pre></div></div>

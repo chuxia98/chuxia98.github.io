@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-05T16:17:10+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">chenyh</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Jekyll Learn</title><link href="http://localhost:4000/2020/11/03/jekyll-learn.html" rel="alternate" type="text/html" title="Jekyll Learn" /><published>2020-11-03T00:00:00+08:00</published><updated>2020-11-03T00:00:00+08:00</updated><id>http://localhost:4000/2020/11/03/jekyll-learn</id><content type="html" xml:base="http://localhost:4000/2020/11/03/jekyll-learn.html">&lt;p&gt;代码高亮&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;
+  &lt;span class=&quot;vi&quot;&gt;@widget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;respond_to&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# show.html.erb&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;json: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@widget&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Jekyll</title><link href="http://localhost:4000/2019/12/23/jekyll.html" rel="alternate" type="text/html" title="Jekyll" /><published>2019-12-23T00:00:00+08:00</published><updated>2019-12-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/23/jekyll</id><content type="html" xml:base="http://localhost:4000/2019/12/23/jekyll.html">&lt;p&gt;&lt;a href=&quot;http://jekyllcn.com&quot;&gt;jekyll cn&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;jekyll en&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;jekyll主题&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.fghrsh.net/post/123.html&quot;&gt;Live2D 看板娘&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;###以下是一个获取最简单 Jekyll 模板并生成静态页面并运行的例子。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~ $ gem install jekyll // 安装 jekyll
+~ $ jekyll new myblog  // 创建新 myblog
+~ $ cd myblog
+~/myblog $ jekyll serve
+# =&amp;gt; Now browse to http://localhost:4000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;启动 jekyll 可以在浏览器打开访问 &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果你希望把 jekyll 安装到当前目录，你可以运行 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt; . 来代替。如果当前目录非空，你还需要增添 &lt;code class=&quot;highlighter-rouge&quot;&gt;--force&lt;/code&gt; 参数，所以命令应为 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new . --force&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;安装jekyll后 
+运行&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;报错
+`
+Dependency Error: Yikes! It looks like you don’t have kramdown-math-katex or one of its dependencies installed. In order to use Jekyll as currently configured, you’ll need to install this gem. If you’ve run Jekyll with &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec&lt;/code&gt;, ensure that you have included the kramdown-math-katex gem in your Gemfile as well. The full error message from Ruby is: ‘cannot load such file – kramdown-math-katex’ If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
+  Conversion error: Jekyll::Converters::Markdown encountered an error while converting ‘_posts/2019-12-23-welcome-to-jekyll.markdown’:
+                    kramdown-math-katex
+             ERROR: YOUR SITE COULD NOT BE BUILT:
+                    ————————————
+                    kramdown-math-katex
+`
+是因为 &lt;code class=&quot;highlighter-rouge&quot;&gt;gem&lt;/code&gt; 缺失 &lt;code class=&quot;highlighter-rouge&quot;&gt;kramdown-math-katex&lt;/code&gt;
+在文件 &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;中添加 &lt;code class=&quot;highlighter-rouge&quot;&gt;gem &quot;kramdown-math-katex&quot;&lt;/code&gt;
+继续运行 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;
+如果还有错误,可能 &lt;code class=&quot;highlighter-rouge&quot;&gt;gem&lt;/code&gt;没有下载这个依赖包
+可以使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt; 尝试
+如果报错会显示如下信息
+`
+Could not find gem ‘kramdown-math-katex’ in any of the gem sources listed in your Gemfile.
+Run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; to install missing gems.
+`
+终端运行 &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; 安装上就OK&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Webview</title><link href="http://localhost:4000/2019/06/12/webview.html" rel="alternate" type="text/html" title="Webview" /><published>2019-06-12T00:00:00+08:00</published><updated>2019-06-12T00:00:00+08:00</updated><id>http://localhost:4000/2019/06/12/webview</id><content type="html" xml:base="http://localhost:4000/2019/06/12/webview.html">&lt;p&gt;在此记录一下 &lt;code class=&quot;highlighter-rouge&quot;&gt;UIWebView&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;WKWebView&lt;/code&gt;  以免再忘记..&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;创建 &lt;code class=&quot;highlighter-rouge&quot;&gt;webView&lt;/code&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/// UIWebView的创建
+- (UIWebView *)webView {
+ if (!_webView) {
+     _webView = [[UIWebView alloc] init];
+     _webView.delegate = self;
+ }
+ return _webView;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 这个是 iOS 与 HTML 商定的方法名
+static NSString * const kAppShareAction = @&quot;appShareMethod&quot;;
+
+- (WKWebView *)webView {
+    if (!_webView) {
+        WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+        // 在此可以添加过个 userContentController, 相当于多个方法, 可以在代理中区分
+        // name 对应的 HTML 中的 &amp;lt;window.webkit.messageHandlers.&amp;lt;#APP 中 MethodName#&amp;gt;.postMessage(&amp;lt;#json数据#&amp;gt;)&amp;gt;
+        [config.userContentController addScriptMessageHandler:self name:kAppShareAction];
+        
+        _webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:config];
+        // WKNavigationDelegate
+        // WebView 相关操作的协议
+        _webView.navigationDelegate = self;
+        // WKUIDelegate 
+        // UI相关的协议,如果没有需求可以不用设置
+        _webView.UIDelegate = self;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;加载网页
+自己写的 &lt;code class=&quot;highlighter-rouge&quot;&gt;HTML&lt;/code&gt; 测试页面
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (NSString *)htmlString {
+ NSString *head = [NSString stringWithFormat:@&quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&lt;/span&gt;title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&quot;];
+
+ NSString *button = @&quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;\&quot;width:&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height:&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;100px&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;\&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onclick=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;\&quot;buttonClick()\&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;点击购买&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;&quot;;
+
+ NSString *body = [NSString stringWithFormat:@&quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;%@&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&quot;, button];
+ // 获取 js 文件路径
+ NSString *jsPath = [NSBundle.mainBundle pathForResource:@&quot;html&quot; ofType:@&quot;js&quot;];
+ NSString *jsHtml = [NSString stringWithFormat:@&quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;\&quot;%@\&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&quot;, jsPath];
+
+ return [NSString stringWithFormat:@&quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;%@%@%@&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&quot;, head, body, jsHtml];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;创建一个&lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt;文件,  快捷键 &lt;code class=&quot;highlighter-rouge&quot;&gt;command + n -&amp;gt; other -&amp;gt; Empty -&amp;gt; html.js&lt;/code&gt;&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function buttonClick() {
+ var json = '{&quot;id&quot;:&quot;666&quot;, &quot;message&quot;:&quot;我是传递的数据&quot;}';
+ try {
+     window.webkit.messageHandlers.appMethod.postMessage(json)
+ } catch(error) {
+     console.log(error)
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;UIWebView&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;WKWebView&lt;/code&gt; 加载网页类似
+ 我这里采用加载本地 &lt;code class=&quot;highlighter-rouge&quot;&gt;loadHTMLString:baseURL:&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 如果 HTMLString 中有用到本地文件需要获取本地文件路径
+NSString *jsPath = [NSBundle.mainBundle pathForResource:@&quot;html&quot; ofType:@&quot;js&quot;];
+// baseURL 中需要传入 js/css 文件路径, 若果传 nil, WebView在显示时会加载不出自己添加的 js/css 相关属性 
+[self.webView loadHTMLString:[self htmlString] baseURL:[NSURL fileURLWithPath:jsPath]];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;loadRequest&lt;/code&gt; 加载网页&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSString *string = @&quot;https://www.baidu.com&quot;;
+NSURL *url = [NSURL URLWithString:string];
+NSURLRequest *request = [NSURLRequest requestWithURL:url];
+[self.webView loadRequest:request];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;获取 &lt;code class=&quot;highlighter-rouge&quot;&gt;webView&lt;/code&gt; 事件
+&lt;code class=&quot;highlighter-rouge&quot;&gt;WKWebView&lt;/code&gt; 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;WKNavigationDelegate&lt;/code&gt; 代理方法获取 &lt;code class=&quot;highlighter-rouge&quot;&gt;webView&lt;/code&gt; 事件
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/// message 中包含 事件名 name, 和对应的数据 body
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+ NSLog(@&quot;name -&amp;gt; %@ body -&amp;gt; %@&quot;, message.name, message.body);
+ if ([message.name isEqualToString:kAppShareAction]) {
+     // TODO
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;UIWebView&lt;/code&gt; 的代理&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 在此可以拦截 webview 的跳转
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    NSLog(@&quot;%@&quot;, request.URL.absoluteString);
+    NSString *aURL = request.URL.absoluteString;
+    // aURL: appName://appMethod
+    // appName: 可以替换为自己项目或公司名字
+    // appMethod: 对应的app方法
+    if ([aURL hasPrefix:@&quot;appName://&quot;]) {
+        // TODO
+        return NO;
+    }
+    return YES;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Predicate</title><link href="http://localhost:4000/2018/08/22/predicate.html" rel="alternate" type="text/html" title="Predicate" /><published>2018-08-22T00:00:00+08:00</published><updated>2018-08-22T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/22/predicate</id><content type="html" xml:base="http://localhost:4000/2018/08/22/predicate.html">&lt;!-- ---
+layout: post
+title: Blogging Like a Hacker
+--- --&gt;
+
+&lt;p&gt;1.对数组中是 &lt;code class=&quot;highlighter-rouge&quot;&gt;Model&lt;/code&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NSDictionary&lt;/code&gt; 过滤&lt;/p&gt;
+
+&lt;p&gt;定义模型 - &lt;code class=&quot;highlighter-rouge&quot;&gt;CXPersion&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@interface CXPerson : NSObject
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, assign) NSInteger age;
+
+@end
+
+@implementation CXPerson
+
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tmp&lt;/code&gt;数组创建&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSMutableArray *tmp = [NSMutableArray array];
+for (int i = 0; i &amp;lt; 20; i ++) {
+    CXPersion *p = [CXPerson new];
+    p.name = [NSString stringWithFormat:@&quot;value%d&quot;, i];
+    p.age = arc4random_uniform(210);
+    [tmp addObject:p];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;过滤&lt;code class=&quot;highlighter-rouge&quot;&gt;Model&lt;/code&gt;中指定&lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// name 是 key, value2 是 value
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@&quot;name = 'value2'&quot;];
+// array 是 tmp 所有 name = value2 的集合
+NSArray *array = [tmp filteredArrayUsingPredicate:predicate];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;过滤&lt;code class=&quot;highlighter-rouge&quot;&gt;Model&lt;/code&gt;中指定条件
+逻辑运算符号 &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt; 都可以使用&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSPredicate *predicate = [NSPredicate predicateWithFormat:@&quot;age &amp;lt; 100&quot;];
+NSArray *array = [tmp filteredArrayUsingPredicate:predicate];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;AND&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;OR&lt;/code&gt;同理, 同时谓词不区分大小写&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSPredicate *predicate = [NSPredicate predicateWithFormat:@&quot;name &amp;gt; 'abc' &amp;amp;&amp;amp; age &amp;gt; 10&quot;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;IN&lt;/code&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BEGINSWITH&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;ENDSWITH&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;CONTAINS&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;LIKE&lt;/code&gt; 的使用&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSPredicate *predicate = [NSPredicate predicateWithFormat:@&quot;name IN {'abc' , 'def' , '123'}&quot;];
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@&quot;name BEGINSWITH 'A'&quot;]; //name以A打头的person
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@&quot;name ENDSWITH 'A'&quot;]; //name以A结尾的person
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@&quot;name CONTAINS 'A'&quot;];
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@&quot;name LIKE '*A*'&quot;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;2.对数组中是 &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt; 过滤 
+使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;SELF&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSArray *array = [NSArray arrayWithObjects:@&quot;abc&quot;, @&quot;def&quot;, @&quot;ghi&quot;, @&quot;jkl&quot;, nil];
+NSPredicate *pre = [NSPredicate predicateWithFormat:@&quot;SELF == 'abc'&quot;];
+NSArray *array2 = [array filteredArrayUsingPredicate:pre];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;3.对正则表达式的使用就不具体说明了&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NSString *regex = @&quot;&quot;;
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;, regex];
+[predicate evaluateWithObject:@&quot;&quot;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;更多用法就以后慢慢补充了…&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>

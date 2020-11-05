@@ -1,0 +1,45 @@
+
+<p><a href="http://jekyllcn.com">jekyll cn</a></p>
+
+<p><a href="https://jekyllrb.com/">jekyll en</a></p>
+
+<p><a href="http://jekyllthemes.org/">jekyll主题</a></p>
+
+<p><a href="https://www.fghrsh.net/post/123.html">Live2D 看板娘</a></p>
+
+<p>###以下是一个获取最简单 Jekyll 模板并生成静态页面并运行的例子。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~ $ gem install jekyll // 安装 jekyll
+~ $ jekyll new myblog  // 创建新 myblog
+~ $ cd myblog
+~/myblog $ jekyll serve
+# =&gt; Now browse to http://localhost:4000
+</code></pre></div></div>
+
+<p>启动 jekyll 可以在浏览器打开访问 <code class="highlighter-rouge">http://localhost:4000</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div></div>
+
+<p>如果你希望把 jekyll 安装到当前目录，你可以运行 <code class="highlighter-rouge">jekyll new</code> . 来代替。如果当前目录非空，你还需要增添 <code class="highlighter-rouge">--force</code> 参数，所以命令应为 <code class="highlighter-rouge">jekyll new . --force</code>。</p>
+
+<p>安装jekyll后 
+运行<code class="highlighter-rouge">jekyll serve</code>报错
+`
+Dependency Error: Yikes! It looks like you don’t have kramdown-math-katex or one of its dependencies installed. In order to use Jekyll as currently configured, you’ll need to install this gem. If you’ve run Jekyll with <code class="highlighter-rouge">bundle exec</code>, ensure that you have included the kramdown-math-katex gem in your Gemfile as well. The full error message from Ruby is: ‘cannot load such file – kramdown-math-katex’ If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
+  Conversion error: Jekyll::Converters::Markdown encountered an error while converting ‘_posts/2019-12-23-welcome-to-jekyll.markdown’:
+                    kramdown-math-katex
+             ERROR: YOUR SITE COULD NOT BE BUILT:
+                    ————————————
+                    kramdown-math-katex
+`
+是因为 <code class="highlighter-rouge">gem</code> 缺失 <code class="highlighter-rouge">kramdown-math-katex</code>
+在文件 <code class="highlighter-rouge">Gemfile</code>中添加 <code class="highlighter-rouge">gem "kramdown-math-katex"</code>
+继续运行 <code class="highlighter-rouge">jekyll serve</code>
+如果还有错误,可能 <code class="highlighter-rouge">gem</code>没有下载这个依赖包
+可以使用 <code class="highlighter-rouge">bundle exec jekyll serve</code> 尝试
+如果报错会显示如下信息
+`
+Could not find gem ‘kramdown-math-katex’ in any of the gem sources listed in your Gemfile.
+Run <code class="highlighter-rouge">bundle install</code> to install missing gems.
+`
+终端运行 <code class="highlighter-rouge">bundle install</code> 安装上就OK</p>
