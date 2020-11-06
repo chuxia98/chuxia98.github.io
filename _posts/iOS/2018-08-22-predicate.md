@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NSPredicate使用
+categories: iOS
 ---
 
 
