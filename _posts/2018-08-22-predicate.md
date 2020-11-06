@@ -1,7 +1,7 @@
-<!-- ---
+---
 layout: post
-title: Blogging Like a Hacker
---- -->
+title: NSPredicate使用
+---
 
 
 1.对数组中是 `Model``NSDictionary` 过滤 

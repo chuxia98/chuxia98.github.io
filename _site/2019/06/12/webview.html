@@ -1,21 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>UIWebView/WKWebView 与 HTML 交互 | chuxia98</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="UIWebView/WKWebView 与 HTML 交互" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="在此记录一下 UIWebView WKWebView 以免再忘记.." />
+<meta property="og:description" content="在此记录一下 UIWebView WKWebView 以免再忘记.." />
+<link rel="canonical" href="http://localhost:4000/2019/06/12/webview.html" />
+<meta property="og:url" content="http://localhost:4000/2019/06/12/webview.html" />
+<meta property="og:site_name" content="chuxia98" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-12T00:00:00+08:00" />
+<script type="application/ld+json">
+{"headline":"UIWebView/WKWebView 与 HTML 交互","dateModified":"2019-06-12T00:00:00+08:00","datePublished":"2019-06-12T00:00:00+08:00","url":"http://localhost:4000/2019/06/12/webview.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/06/12/webview.html"},"description":"在此记录一下 UIWebView WKWebView 以免再忘记..","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="chuxia98" /></head>
+<body><header class="site-header" role="banner">
 
-<p>在此记录一下 <code class="highlighter-rouge">UIWebView</code> <code class="highlighter-rouge">WKWebView</code>  以免再忘记..</p>
+  <div class="wrapper"><a class="site-title" rel="author" href="/">chuxia98</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/">学习记录</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">UIWebView/WKWebView 与 HTML 交互</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-06-12T00:00:00+08:00" itemprop="datePublished">Jun 12, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>在此记录一下 <code class="highlighter-rouge">UIWebView</code> <code class="highlighter-rouge">WKWebView</code>  以免再忘记..</p>
 
 <ol>
-  <li>创建 <code class="highlighter-rouge">webView</code>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/// UIWebView的创建
-- (UIWebView *)webView {
- if (!_webView) {
-     _webView = [[UIWebView alloc] init];
-     _webView.delegate = self;
- }
- return _webView;
-}
-</code></pre></div>    </div>
-  </li>
+  <li>创建 <code class="highlighter-rouge">UIWebView</code><code class="highlighter-rouge">WKWebView</code></li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 这个是 iOS 与 HTML 商定的方法名
+<figure class="highlight"><pre><code class="language-objectc" data-lang="objectc"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>- (UIWebView *)webView {
+    if (!_webView) {
+        _webView = [[UIWebView alloc] init];
+        _webView.delegate = self;
+    }
+    return _webView;
+}
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-objectc" data-lang="objectc"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="code"><pre>// 这个是 iOS 与 HTML 商定的方法名
 static NSString * const kAppShareAction = @"appShareMethod";
 
 - (WKWebView *)webView {
@@ -34,68 +105,121 @@ static NSString * const kAppShareAction = @"appShareMethod";
         _webView.UIDelegate = self;
     }
 }
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <ol>
   <li>加载网页
-自己写的 <code class="highlighter-rouge">HTML</code> 测试页面
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (NSString *)htmlString {
- NSString *head = [NSString stringWithFormat:@"<span class="nt">&lt;head&gt;&lt;title&gt;</span>title<span class="nt">&lt;/title&gt;&lt;/head&gt;</span>"];
-
- NSString *button = @"<span class="nt">&lt;button</span> <span class="na">style=</span><span class="s">\"width:</span> <span class="na">100</span><span class="err">%;</span> <span class="na">height:</span> <span class="na">100px</span><span class="err">;\"</span> <span class="na">onclick=</span><span class="s">\"buttonClick()\"</span><span class="nt">&gt;</span>点击购买<span class="nt">&lt;/button&gt;</span>";
-
- NSString *body = [NSString stringWithFormat:@"<span class="nt">&lt;body&gt;</span>%@<span class="nt">&lt;/body&gt;</span>", button];
- // 获取 js 文件路径
- NSString *jsPath = [NSBundle.mainBundle pathForResource:@"html" ofType:@"js"];
- NSString *jsHtml = [NSString stringWithFormat:@"<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">\"%@\"</span><span class="nt">&gt;&lt;/script&gt;</span>", jsPath];
-
- return [NSString stringWithFormat:@"<span class="nt">&lt;html&gt;</span>%@%@%@<span class="nt">&lt;/html&gt;</span>", head, body, jsHtml];
-}
-</code></pre></div>    </div>
-    <p>创建一个<code class="highlighter-rouge">js</code>文件,  快捷键 <code class="highlighter-rouge">command + n -&gt; other -&gt; Empty -&gt; html.js</code></p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function buttonClick() {
- var json = '{"id":"666", "message":"我是传递的数据"}';
- try {
-     window.webkit.messageHandlers.appMethod.postMessage(json)
- } catch(error) {
-     console.log(error)
- }
-}
-</code></pre></div>    </div>
-  </li>
+自己写的 <code class="highlighter-rouge">HTML</code> 测试页面</li>
 </ol>
+
+<figure class="highlight"><pre><code class="language-objectc" data-lang="objectc"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre>- (NSString *)htmlString {
+    NSString *head = [NSString stringWithFormat:@"&lt;head&gt;&lt;title&gt;title&lt;/title&gt;&lt;/head&gt;"];
+
+    NSString *button = @"&lt;button style=\"width: 100%; height: 100px;\" onclick=\"buttonClick()\"&gt;点击购买&lt;/button&gt;";
+
+    NSString *body = [NSString stringWithFormat:@"&lt;body&gt;%@&lt;/body&gt;", button];
+    // 获取 js 文件路径
+    NSString *jsPath = [NSBundle.mainBundle pathForResource:@"html" ofType:@"js"];
+    NSString *jsHtml = [NSString stringWithFormat:@"&lt;script src=\"%@\"&gt;&lt;/script&gt;", jsPath];
+
+    return [NSString stringWithFormat:@"&lt;html&gt;%@%@%@&lt;/html&gt;", head, body, jsHtml];
+}
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>创建一个<code class="highlighter-rouge">js</code>文件,  快捷键 <code class="highlighter-rouge">command + n -&gt; other -&gt; Empty -&gt; html.js</code></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre>function buttonClick() {
+    var json = '{"id":"666", "message":"我是传递的数据"}';
+    try {
+        window.webkit.messageHandlers.appMethod.postMessage(json)
+    } catch(error) {
+        console.log(error)
+    }
+}
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p><code class="highlighter-rouge">UIWebView</code> <code class="highlighter-rouge">WKWebView</code> 加载网页类似
  我这里采用加载本地 <code class="highlighter-rouge">loadHTMLString:baseURL:</code></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 如果 HTMLString 中有用到本地文件需要获取本地文件路径
+
+<figure class="highlight"><pre><code class="language-objectc" data-lang="objectc"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre>// 如果 HTMLString 中有用到本地文件需要获取本地文件路径
 NSString *jsPath = [NSBundle.mainBundle pathForResource:@"html" ofType:@"js"];
 // baseURL 中需要传入 js/css 文件路径, 若果传 nil, WebView在显示时会加载不出自己添加的 js/css 相关属性 
 [self.webView loadHTMLString:[self htmlString] baseURL:[NSURL fileURLWithPath:jsPath]];
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>使用 <code class="highlighter-rouge">loadRequest</code> 加载网页</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NSString *string = @"https://www.baidu.com";
+
+<figure class="highlight"><pre><code class="language-objectc" data-lang="objectc"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre>NSString *string = @"https://www.baidu.com";
 NSURL *url = [NSURL URLWithString:string];
 NSURLRequest *request = [NSURLRequest requestWithURL:url];
 [self.webView loadRequest:request];
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <ol>
   <li>获取 <code class="highlighter-rouge">webView</code> 事件
-<code class="highlighter-rouge">WKWebView</code> 的 <code class="highlighter-rouge">WKNavigationDelegate</code> 代理方法获取 <code class="highlighter-rouge">webView</code> 事件
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/// message 中包含 事件名 name, 和对应的数据 body
-- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
- NSLog(@"name -&gt; %@ body -&gt; %@", message.name, message.body);
- if ([message.name isEqualToString:kAppShareAction]) {
-     // TODO
- }
-}
-</code></pre></div>    </div>
-  </li>
+<code class="highlighter-rouge">WKWebView</code> 的 <code class="highlighter-rouge">WKNavigationDelegate</code> 代理方法获取 <code class="highlighter-rouge">webView</code> 事件</li>
 </ol>
 
+<figure class="highlight"><pre><code class="language-objectc" data-lang="objectc"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>/// message 中包含 事件名 name, 和对应的数据 body
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+    NSLog(@"name -&gt; %@ body -&gt; %@", message.name, message.body);
+    if ([message.name isEqualToString:kAppShareAction]) {
+        // TODO
+    }
+}
+</pre></td></tr></tbody></table></code></pre></figure>
+
 <p><code class="highlighter-rouge">UIWebView</code> 的代理</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 在此可以拦截 webview 的跳转
+
+<figure class="highlight"><pre><code class="language-objectc" data-lang="objectc"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre>// 在此可以拦截 webview 的跳转
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSLog(@"%@", request.URL.absoluteString);
     NSString *aURL = request.URL.absoluteString;
@@ -108,4 +232,37 @@ NSURLRequest *request = [NSURLRequest requestWithURL:url];
     }
     return YES;
 }
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+
+  </div><a class="u-url" href="/2019/06/12/webview.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">chuxia98</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">chuxia98</li><li><a class="u-email" href="mailto:chenyh875@gmail.com">chenyh875@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/chuxia98"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">chuxia98</span></a></li><li><a href="https://www.twitter.com/twitter"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">twitter</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

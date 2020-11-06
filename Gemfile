@@ -28,6 +28,13 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
   gem "tzinfo-data"
 end
 
-# Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
+# gem 'my-awesome-jekyll-theme'
 
+# # Performance-booster for watching directories on Windows
+# gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
+
+# require 'json'
+# require 'open-uri'
+# versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+
+# gem 'github-pages', versions['github-pages']

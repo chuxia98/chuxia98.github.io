@@ -1,4 +1,16 @@
+---
+layout: post
+title: Jekyll Learn
+---
 
+文章列表
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 
 代码高亮
 
@@ -10,4 +22,10 @@ def show
     format.json { render json: @widget }
   end
 end
-{% endhighlight ruby %}
+{% endhighlight %}
+
+{% highlight ruby linenos %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
