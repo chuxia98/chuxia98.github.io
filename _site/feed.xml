@@ -1,12 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-06T16:26:47+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">首页</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Flutter BLoC 使用</title><link href="http://localhost:4000/flutter/2020/06/25/flutter-bloc-use.html" rel="alternate" type="text/html" title="Flutter BLoC 使用" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>http://localhost:4000/flutter/2020/06/25/flutter-bloc-use</id><content type="html" xml:base="http://localhost:4000/flutter/2020/06/25/flutter-bloc-use.html">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BLoC&lt;/code&gt; 是 &lt;code class=&quot;highlighter-rouge&quot;&gt;Flutter&lt;/code&gt; 中状态管理的一种, 它可以实现业务逻辑与 UI 分离&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-09T17:17:33+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">首页</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Flutter Future</title><link href="http://localhost:4000/flutter/2020/06/26/future.html" rel="alternate" type="text/html" title="Flutter Future" /><published>2020-06-26T00:00:00+08:00</published><updated>2020-06-26T00:00:00+08:00</updated><id>http://localhost:4000/flutter/2020/06/26/future</id><content type="html" xml:base="http://localhost:4000/flutter/2020/06/26/future.html"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Flutter BLoC 使用</title><link href="http://localhost:4000/flutter/2020/06/25/flutter-bloc-use.html" rel="alternate" type="text/html" title="Flutter BLoC 使用" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>http://localhost:4000/flutter/2020/06/25/flutter-bloc-use</id><content type="html" xml:base="http://localhost:4000/flutter/2020/06/25/flutter-bloc-use.html">&lt;h1 id=&quot;简介&quot;&gt;简介&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BLoC&lt;/code&gt; 是 &lt;code class=&quot;highlighter-rouge&quot;&gt;Flutter&lt;/code&gt; 中状态管理的一种, 它可以实现业务逻辑与 UI 分离&lt;/p&gt;
 
 &lt;p&gt;其分为三部分组成 &lt;code class=&quot;highlighter-rouge&quot;&gt;bloc&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;event&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;state&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bloc&lt;/code&gt; 是组织处理 &lt;code class=&quot;highlighter-rouge&quot;&gt;event&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;state&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;event&lt;/code&gt; 是事件类型, 所有的操作都可以看做是一个 Event事件, 比如按钮的点击, 列表的刷新,&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;event&lt;/code&gt; 是事件类型&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;state&lt;/code&gt; 是处理完 &lt;code class=&quot;highlighter-rouge&quot;&gt;event&lt;/code&gt; 对应的 &lt;code class=&quot;highlighter-rouge&quot;&gt;state&lt;/code&gt; 状态, 比如 点击按钮后 按钮的选中或未选中, 列表的刷新状态,是在刷新中还是刷新成功/失败&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;state&lt;/code&gt; 是处理完对应 &lt;code class=&quot;highlighter-rouge&quot;&gt;event&lt;/code&gt; 的状态&lt;/p&gt;</content><author><name></name></author><summary type="html">BLoC 是 Flutter 中状态管理的一种, 它可以实现业务逻辑与 UI 分离</summary></entry><entry><title type="html">Jekyll 使用</title><link href="http://localhost:4000/2019/12/23/jekyll.html" rel="alternate" type="text/html" title="Jekyll 使用" /><published>2019-12-23T00:00:00+08:00</published><updated>2019-12-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/23/jekyll</id><content type="html" xml:base="http://localhost:4000/2019/12/23/jekyll.html">&lt;p&gt;&lt;a href=&quot;http://jekyllcn.com&quot;&gt;jekyll cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bloc&lt;/code&gt; 是组织处理 &lt;code class=&quot;highlighter-rouge&quot;&gt;event&lt;/code&gt; 返回 &lt;code class=&quot;highlighter-rouge&quot;&gt;state&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;引入&quot;&gt;引入&lt;/h1&gt;
+
+&lt;p&gt;在 flutter 项目中 pubspec.yaml 文件中引入 bloc&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;flutter_bloc: ^6.1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;创建-bloc&quot;&gt;创建 Bloc&lt;/h1&gt;
+
+&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;BlocProvider&lt;/code&gt; 创建一个 bloc&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 中括号内是泛型, 标明当前这个 BlocProvider 是 MyBloc 类型
+// 需要使用 bloc 的 widget 放在这个 BlocProvider child属性里面
+BlocProvider&amp;lt;MyBloc&amp;gt;(
+    create: (context) =&amp;gt; MyBloc(),
+    child: Widget(),  
+),
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;BlocProvider&lt;/code&gt; 创建一个 bloc&lt;/p&gt;</content><author><name></name></author><summary type="html">简介</summary></entry><entry><title type="html">Jekyll 使用</title><link href="http://localhost:4000/2019/12/23/jekyll.html" rel="alternate" type="text/html" title="Jekyll 使用" /><published>2019-12-23T00:00:00+08:00</published><updated>2019-12-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/23/jekyll</id><content type="html" xml:base="http://localhost:4000/2019/12/23/jekyll.html">&lt;p&gt;&lt;a href=&quot;http://jekyllcn.com&quot;&gt;jekyll cn&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;jekyll en&lt;/a&gt;&lt;/p&gt;
 
