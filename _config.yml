@@ -24,8 +24,20 @@ kramdown:
   math_engine: katex # 防止行间公式渲染错误
   footnote_nr:    1
 
+header_pages:
+  - about/about.markdown
+  - project/index.md
+
+# webrick:
+# headers:
+#   My-Header: about/about.markdown
+#   My-Other-Header: product/index.md
+
 # paginate: 1
 # paginate_path: "page:num"
+
+# To display post-excerpts on the Home Page, simply add the following to your _config.yml:
+# show_excerpts: true
 
 title: 首页
 email: chenyh875@gmail.com
@@ -38,13 +50,15 @@ url: "http://chuxia98.github.io" # the base hostname & protocol for your site, e
 twitter_username: Yinghao Chen
 github_username:  chuxia98
 
+auto: true
+
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
 
 # 阅读处理
-safe:         false
+safe: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
