@@ -9,7 +9,9 @@ categories: Flutter
 `flutter attach`
 
 
-> 打包 `Android` 时用的比较多, 打 `Android` 渠道包时可以加一些参数: `--flavor 渠道标识`
+> 打包 `Android` 时用的比较多,  apk生成路径 项目根目录>build>app>outputs>apk
+>> 打 `Android` 渠道包时可以加一些参数: `--flavor 渠道标识`<br>
+>> 默认 `release` 包, 如果需要 `Debug` 包, 跟上 `--debug` 表示 debug 包
 
 `flutter build apk`
 
@@ -42,9 +44,9 @@ categories: Flutter
 `flutter upgrade`
 
 > 运行 flutter 项目, 后面可以跟一些可选参数 
-
-> `-v` 启动时打印详细日志
-
-> `-d device-id` 运行指定的设备, `flutter device` 获取device-id
+>> `-v` 启动时打印详细日志 <br>
+>>`-d device-id` 运行指定的设备, `flutter device` 获取device-id <br>
+>> `--release` 运行 relase 包 <br>
+>> `--debug` 运行 debug 包
 
 `flutter run`

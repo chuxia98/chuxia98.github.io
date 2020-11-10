@@ -52,7 +52,11 @@
 <p><code class="highlighter-rouge">flutter attach</code></p>
 
 <blockquote>
-  <p>打包 <code class="highlighter-rouge">Android</code> 时用的比较多, 打 <code class="highlighter-rouge">Android</code> 渠道包时可以加一些参数: <code class="highlighter-rouge">--flavor 渠道标识</code></p>
+  <p>打包 <code class="highlighter-rouge">Android</code> 时用的比较多,  apk生成路径 项目根目录&gt;build&gt;app&gt;outputs&gt;apk</p>
+  <blockquote>
+    <p>打 <code class="highlighter-rouge">Android</code> 渠道包时可以加一些参数: <code class="highlighter-rouge">--flavor 渠道标识</code><br />
+默认 <code class="highlighter-rouge">release</code> 包, 如果需要 <code class="highlighter-rouge">Debug</code> 包, 跟上 <code class="highlighter-rouge">--debug</code> 表示 debug 包</p>
+  </blockquote>
 </blockquote>
 
 <p><code class="highlighter-rouge">flutter build apk</code></p>
@@ -101,14 +105,12 @@
 
 <blockquote>
   <p>运行 flutter 项目, 后面可以跟一些可选参数</p>
-</blockquote>
-
-<blockquote>
-  <p><code class="highlighter-rouge">-v</code> 启动时打印详细日志</p>
-</blockquote>
-
-<blockquote>
-  <p><code class="highlighter-rouge">-d device-id</code> 运行指定的设备, <code class="highlighter-rouge">flutter device</code> 获取device-id</p>
+  <blockquote>
+    <p><code class="highlighter-rouge">-v</code> 启动时打印详细日志 <br />
+<code class="highlighter-rouge">-d device-id</code> 运行指定的设备, <code class="highlighter-rouge">flutter device</code> 获取device-id <br />
+<code class="highlighter-rouge">--release</code> 运行 relase 包 <br />
+<code class="highlighter-rouge">--debug</code> 运行 debug 包</p>
+  </blockquote>
 </blockquote>
 
 <p><code class="highlighter-rouge">flutter run</code></p>
