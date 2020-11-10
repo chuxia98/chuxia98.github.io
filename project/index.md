@@ -12,7 +12,7 @@ permalink: /project/
 
 [熟读佛经](https://apps.apple.com/cn/app/id1494621856)
 
-[ShowLive]()
+[ShowLive](http://www.xiubi.com/)
 
 [一席](https://apps.apple.com/cn/app/id912814691)
 
