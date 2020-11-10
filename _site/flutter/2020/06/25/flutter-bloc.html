@@ -9,13 +9,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="简介" />
 <meta property="og:description" content="简介" />
-<link rel="canonical" href="http://localhost:4000/flutter/2020/06/25/flutter-bloc-use.html" />
-<meta property="og:url" content="http://localhost:4000/flutter/2020/06/25/flutter-bloc-use.html" />
+<link rel="canonical" href="http://localhost:4000/flutter/2020/06/25/flutter-bloc.html" />
+<meta property="og:url" content="http://localhost:4000/flutter/2020/06/25/flutter-bloc.html" />
 <meta property="og:site_name" content="首页" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-25T00:00:00+08:00" />
 <script type="application/ld+json">
-{"headline":"Flutter BLoC 使用","dateModified":"2020-06-25T00:00:00+08:00","datePublished":"2020-06-25T00:00:00+08:00","url":"http://localhost:4000/flutter/2020/06/25/flutter-bloc-use.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/flutter/2020/06/25/flutter-bloc-use.html"},"description":"简介","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"headline":"Flutter BLoC 使用","dateModified":"2020-06-25T00:00:00+08:00","datePublished":"2020-06-25T00:00:00+08:00","url":"http://localhost:4000/flutter/2020/06/25/flutter-bloc.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/flutter/2020/06/25/flutter-bloc.html"},"description":"简介","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="首页" /></head>
 <body><header class="site-header" role="banner">
@@ -62,13 +62,75 @@
 <p>在 flutter 项目中 pubspec.yaml 文件中引入 bloc</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter_bloc: ^6.1.0
+equatable: ^1.2.5
 </code></pre></div></div>
 
 <h1 id="创建-bloc">创建 Bloc</h1>
 
+<p>在创建<code class="highlighter-rouge">bloc</code>之前, 如果还没影想好会触发哪些 <code class="highlighter-rouge">event</code> 和 <code class="highlighter-rouge">state</code> 先不用着急, 可以先只写一个抽象类</p>
+
+<p><code class="highlighter-rouge">Equatable</code> 是 <code class="highlighter-rouge">compare objects</code> 的抽象类, 在 <code class="highlighter-rouge">bloc</code> 中用来对比 state 是否是同一个</p>
+
+<p><code class="highlighter-rouge">Bloc</code> 的创建都是固定的写法, VS/AS 都提供有快捷生成的命令</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>abstract class MyEvent extends Equatable {}
+
+// 在这里创建一个 MyTitleChanged 继承 MyEvent
+class MyTitleChanged extends MyEvent {
+  final String title;
+
+  MyTitleChanged({
+    this.title,
+  });
+
+  @override
+  List&lt;Object&gt; get props =&gt; [title];
+}
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>abstract class MyState extends Equatable {
+  @override
+  List&lt;Object&gt; get props =&gt; [];
+}
+
+// 每个`bloc`都有一个初始化状态
+class MyInitial extends MyState {}
+
+// 对应 MyTitleChanged 事件的状态
+class MyTitleChangeSuccess extends MyState {
+  final String title;
+
+  MyTitleChangeSuccess({
+    this.title = '',
+  });
+
+  @override
+  List&lt;Object&gt; get props =&gt; [title];
+}
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 实现一个自己的`bloc`继承自`Bloc`声明是触发`MyEvent`类型的事件, 返回`MyState`类型的状态
+// `Bloc` 6.0 以后必须实现的两个方法
+class MyBloc extends Bloc&lt;MyEvent, MyState&gt; {
+  // 初始化
+  MyBloc() : super(MyInitial());
+  
+  // 触发 MyTitleChanged 事件时, 做的处理并且返回 MyTitleChangeSuccess 类型的状态
+  @override
+  Stream&lt;MyState&gt; mapEventToState(MyEvent event) async* {
+    if (event is MyTitleChanged) {
+      // 在这里做一些逻辑事件
+      yield MyTitleChangeSuccess(title: event.title);
+    }
+  }
+}
+</code></pre></div></div>
+
 <p>使用 <code class="highlighter-rouge">BlocProvider</code> 创建一个 bloc</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 中括号内是泛型, 标明当前这个 BlocProvider 是 MyBloc 类型
+// 在当前 widget 树下可以通过 BlocProvider.of&lt;MyBloc&gt;(context) 取出 MyBloc 并使用
 // 需要使用 bloc 的 widget 放在这个 BlocProvider child属性里面
 BlocProvider&lt;MyBloc&gt;(
     create: (context) =&gt; MyBloc(),
@@ -76,9 +138,9 @@ BlocProvider&lt;MyBloc&gt;(
 ),
 </code></pre></div></div>
 
-<p>使用 <code class="highlighter-rouge">BlocProvider</code> 创建一个 bloc</p>
+<p><a href="https://github.com/chuxia98/flutter_demo">Demo地址</a></p>
 
-  </div><a class="u-url" href="/flutter/2020/06/25/flutter-bloc-use.html" hidden></a>
+  </div><a class="u-url" href="/flutter/2020/06/25/flutter-bloc.html" hidden></a>
 </article>
 
       </div>
