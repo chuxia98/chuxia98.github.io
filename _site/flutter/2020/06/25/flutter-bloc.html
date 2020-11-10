@@ -47,6 +47,10 @@
   <div class="post-content e-content" itemprop="articleBody">
     <h1 id="简介">简介</h1>
 
+<p><code class="highlighter-rouge">Widget</code> 分为 <code class="highlighter-rouge">StatelessWidget</code> 和 <code class="highlighter-rouge">StatefulWidget</code></p>
+
+<p><code class="highlighter-rouge">StatefulWidget</code> 中可以通过 <code class="highlighter-rouge">setState</code> 修改变量的值来重新构建 widget树, 而在<code class="highlighter-rouge">flutter</code>中我们应该尽量少的重新构建widget树, 这里就引入了<code class="highlighter-rouge">bloc</code></p>
+
 <p><code class="highlighter-rouge">BLoC</code> 是 <code class="highlighter-rouge">Flutter</code> 中状态管理的一种, 它可以实现业务逻辑与 UI 分离</p>
 
 <p>其分为三部分组成 <code class="highlighter-rouge">bloc</code> <code class="highlighter-rouge">event</code> <code class="highlighter-rouge">state</code></p>

@@ -6,6 +6,10 @@ categories: Flutter
 
 # 简介
 
+`Widget` 分为 `StatelessWidget` 和 `StatefulWidget`
+
+`StatefulWidget` 中可以通过 `setState` 修改变量的值来重新构建 widget树, 而在`flutter`中我们应该尽量少的重新构建widget树, 这里就引入了`bloc`
+
 `BLoC` 是 `Flutter` 中状态管理的一种, 它可以实现业务逻辑与 UI 分离
 
 其分为三部分组成 `bloc` `event` `state`
@@ -102,8 +106,6 @@ BlocProvider<MyBloc>(
     child: Widget(),  
 ),
 ```
-
-
 
 
 [Demo地址](https://github.com/chuxia98/flutter_demo)
