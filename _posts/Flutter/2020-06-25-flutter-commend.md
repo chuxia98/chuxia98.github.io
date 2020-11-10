@@ -47,6 +47,8 @@ categories: Flutter
 >> `-v` 启动时打印详细日志 <br>
 >>`-d device-id` 运行指定的设备, `flutter device` 获取device-id <br>
 >> `--release` 运行 relase 包 <br>
->> `--debug` 运行 debug 包
+>> `--debug` 运行 debug 包 <br>
+>> `-t main.dart` 多个启动入口 <br>
+>> `--flavor daily` 不同渠道参数
 
 `flutter run`
