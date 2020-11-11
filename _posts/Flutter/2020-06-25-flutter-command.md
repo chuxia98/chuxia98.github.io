@@ -2,6 +2,7 @@
 layout: post
 title: flutter中常用的命令
 categories: Flutter
+permalink: /command/
 ---
 
 > 一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用

@@ -2,6 +2,7 @@
 layout: post
 title: Flutter BLoC 使用
 categories: Flutter
+permalink: /bloc-use/
 ---
 
 # 简介

@@ -35,3 +35,9 @@ iOS 项目
 [Eighteen018](https://apps.apple.com/cn/app/id1278841161)
 
 [EIGHTEEN](https://apps.apple.com/cn/app/id1147642072)
+
+<details>
+<summary>简介</summary>
+
+我是简介
+</details>
