@@ -36,8 +36,8 @@ iOS 项目
 
 [EIGHTEEN](https://apps.apple.com/cn/app/id1147642072)
 
-<details>
+<!-- <details>
 <summary>简介</summary>
 
 我是简介
-</details>
+</details> -->

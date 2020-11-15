@@ -25,8 +25,8 @@ kramdown:
   footnote_nr:    1
 
 header_pages:
-  - about/about.markdown
   - project/index.md
+  - about/about.markdown
 
 # webrick:
 # headers:
