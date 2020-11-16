@@ -28,6 +28,9 @@ header_pages:
   - project/index.md
   - about/about.markdown
 
+  # G-4FKH2NT8Q0
+google_analytics: G-4FKH2NT8Q0
+
 # webrick:
 # headers:
 #   My-Header: about/about.markdown

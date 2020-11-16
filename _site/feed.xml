@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-16T09:39:44+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">首页</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Flutter Future</title><link href="http://localhost:4000/future/" rel="alternate" type="text/html" title="Flutter Future" /><published>2020-06-26T00:00:00+08:00</published><updated>2020-06-26T00:00:00+08:00</updated><id>http://localhost:4000/future</id><content type="html" xml:base="http://localhost:4000/future/">&lt;h1 id=&quot;future&quot;&gt;Future&lt;/h1&gt;</content><author><name></name></author><summary type="html">Future</summary></entry><entry><title type="html">Flutter BLoC 使用</title><link href="http://localhost:4000/bloc-use/" rel="alternate" type="text/html" title="Flutter BLoC 使用" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>http://localhost:4000/flutter-bloc</id><content type="html" xml:base="http://localhost:4000/bloc-use/">&lt;h1 id=&quot;简介&quot;&gt;简介&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-16T23:53:21+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">首页</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Flutter Future</title><link href="http://localhost:4000/future/" rel="alternate" type="text/html" title="Flutter Future" /><published>2020-06-26T00:00:00+08:00</published><updated>2020-06-26T00:00:00+08:00</updated><id>http://localhost:4000/future</id><content type="html" xml:base="http://localhost:4000/future/">&lt;h1 id=&quot;future&quot;&gt;Future&lt;/h1&gt;</content><author><name></name></author><summary type="html">Future</summary></entry><entry><title type="html">Flutter BLoC 使用</title><link href="http://localhost:4000/bloc-use/" rel="alternate" type="text/html" title="Flutter BLoC 使用" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>http://localhost:4000/flutter-bloc</id><content type="html" xml:base="http://localhost:4000/bloc-use/">&lt;h1 id=&quot;简介&quot;&gt;简介&lt;/h1&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Widget&lt;/code&gt; 分为 &lt;code class=&quot;highlighter-rouge&quot;&gt;StatelessWidget&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;StatefulWidget&lt;/code&gt;&lt;/p&gt;
 
@@ -95,63 +95,81 @@ BlocProvider&amp;lt;MyBloc&amp;gt;(
 ),
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/chuxia98/flutter_demo&quot;&gt;Demo地址&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">简介</summary></entry><entry><title type="html">flutter中常用的命令</title><link href="http://localhost:4000/command/" rel="alternate" type="text/html" title="flutter中常用的命令" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>http://localhost:4000/flutter-command</id><content type="html" xml:base="http://localhost:4000/command/">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/chuxia98/flutter_demo&quot;&gt;Demo地址&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">简介</summary></entry><entry><title type="html">flutter中常用的命令</title><link href="http://localhost:4000/command/" rel="alternate" type="text/html" title="flutter中常用的命令" /><published>2020-06-25T00:00:00+08:00</published><updated>2020-06-25T00:00:00+08:00</updated><id>http://localhost:4000/flutter-command</id><content type="html" xml:base="http://localhost:4000/command/">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter attach&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
   &lt;p&gt;一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter attach&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter build apk&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;打包 &lt;code class=&quot;highlighter-rouge&quot;&gt;Android&lt;/code&gt; 时用的比较多,  apk生成路径 项目根目录&amp;gt;build&amp;gt;app&amp;gt;outputs&amp;gt;apk&lt;/p&gt;
+  &lt;p&gt;打包 &lt;code class=&quot;highlighter-rouge&quot;&gt;Android&lt;/code&gt; 时用的比较多,  apk生成路径 &lt;code class=&quot;highlighter-rouge&quot;&gt;项目根目录/build/app/outputs/apk&lt;/code&gt;&lt;/p&gt;
   &lt;blockquote&gt;
-    &lt;p&gt;打 &lt;code class=&quot;highlighter-rouge&quot;&gt;Android&lt;/code&gt; 渠道包时可以加一些参数: &lt;code class=&quot;highlighter-rouge&quot;&gt;--flavor 渠道标识&lt;/code&gt;&lt;br /&gt;
+    &lt;p&gt;打 &lt;code class=&quot;highlighter-rouge&quot;&gt;Android&lt;/code&gt; 渠道包时可以加一些参数: &lt;code class=&quot;highlighter-rouge&quot;&gt;--flavor&lt;/code&gt; 渠道标识&lt;br /&gt;
 默认 &lt;code class=&quot;highlighter-rouge&quot;&gt;release&lt;/code&gt; 包, 如果需要 &lt;code class=&quot;highlighter-rouge&quot;&gt;Debug&lt;/code&gt; 包, 跟上 &lt;code class=&quot;highlighter-rouge&quot;&gt;--debug&lt;/code&gt; 表示 debug 包&lt;/p&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter build apk&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter create project_name&lt;/code&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;创建一个新的 flutter 项目, flutter项目一般都是小写字母下划线分割, 没有特殊符号&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter create project_name&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter doctor&lt;/code&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;查看当前flutter版本及相关开发工具安装信息&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter doctor&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter clean&lt;/code&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;清理工作区, 知情理当前项目的&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter clean&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter devices&lt;/code&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;查看当前设备&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter devices&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter format .&lt;/code&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;格式化文件 &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt; 表示全部文件, 可以是单个文件&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter format .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter pub get&lt;/code&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;修改 pubspec.yaml后, 拉依赖&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter pub get&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter upgrade&lt;/code&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;更新 flutter&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter upgrade&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter run&lt;/code&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;运行 flutter 项目, 后面可以跟一些可选参数&lt;/p&gt;
@@ -165,7 +183,7 @@ BlocProvider&amp;lt;MyBloc&amp;gt;(
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;flutter run&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用</summary></entry><entry><title type="html">Jekyll 使用</title><link href="http://localhost:4000/2019/12/23/jekyll.html" rel="alternate" type="text/html" title="Jekyll 使用" /><published>2019-12-23T00:00:00+08:00</published><updated>2019-12-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/23/jekyll</id><content type="html" xml:base="http://localhost:4000/2019/12/23/jekyll.html">&lt;p&gt;&lt;a href=&quot;http://jekyllcn.com&quot;&gt;jekyll cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">flutter attach 一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用</summary></entry><entry><title type="html">Jekyll 使用</title><link href="http://localhost:4000/2019/12/23/jekyll.html" rel="alternate" type="text/html" title="Jekyll 使用" /><published>2019-12-23T00:00:00+08:00</published><updated>2019-12-23T00:00:00+08:00</updated><id>http://localhost:4000/2019/12/23/jekyll</id><content type="html" xml:base="http://localhost:4000/2019/12/23/jekyll.html">&lt;p&gt;&lt;a href=&quot;http://jekyllcn.com&quot;&gt;jekyll cn&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;jekyll en&lt;/a&gt;&lt;/p&gt;
 

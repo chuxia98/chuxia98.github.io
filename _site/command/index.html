@@ -7,15 +7,15 @@
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="flutter中常用的命令" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用" />
-<meta property="og:description" content="一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用" />
+<meta name="description" content="flutter attach 一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用" />
+<meta property="og:description" content="flutter attach 一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用" />
 <link rel="canonical" href="http://localhost:4000/command/" />
 <meta property="og:url" content="http://localhost:4000/command/" />
 <meta property="og:site_name" content="首页" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-25T00:00:00+08:00" />
 <script type="application/ld+json">
-{"headline":"flutter中常用的命令","dateModified":"2020-06-25T00:00:00+08:00","datePublished":"2020-06-25T00:00:00+08:00","url":"http://localhost:4000/command/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/command/"},"description":"一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"headline":"flutter中常用的命令","dateModified":"2020-06-25T00:00:00+08:00","datePublished":"2020-06-25T00:00:00+08:00","url":"http://localhost:4000/command/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/command/"},"description":"flutter attach 一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="首页" /></head>
 <body><header class="site-header" role="banner">
@@ -45,63 +45,81 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <blockquote>
+    <p><code class="highlighter-rouge">flutter attach</code></p>
+<blockquote>
   <p>一般混合开发项目会用到, 原生项目启动后, 附加 flutter module 时使用</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">flutter attach</code></p>
+<p><br /></p>
 
+<p><code class="highlighter-rouge">flutter build apk</code></p>
 <blockquote>
-  <p>打包 <code class="highlighter-rouge">Android</code> 时用的比较多,  apk生成路径 项目根目录&gt;build&gt;app&gt;outputs&gt;apk</p>
+  <p>打包 <code class="highlighter-rouge">Android</code> 时用的比较多,  apk生成路径 <code class="highlighter-rouge">项目根目录/build/app/outputs/apk</code></p>
   <blockquote>
-    <p>打 <code class="highlighter-rouge">Android</code> 渠道包时可以加一些参数: <code class="highlighter-rouge">--flavor 渠道标识</code><br />
+    <p>打 <code class="highlighter-rouge">Android</code> 渠道包时可以加一些参数: <code class="highlighter-rouge">--flavor</code> 渠道标识<br />
 默认 <code class="highlighter-rouge">release</code> 包, 如果需要 <code class="highlighter-rouge">Debug</code> 包, 跟上 <code class="highlighter-rouge">--debug</code> 表示 debug 包</p>
   </blockquote>
 </blockquote>
 
-<p><code class="highlighter-rouge">flutter build apk</code></p>
+<p><br /></p>
+
+<p><code class="highlighter-rouge">flutter create project_name</code></p>
 
 <blockquote>
   <p>创建一个新的 flutter 项目, flutter项目一般都是小写字母下划线分割, 没有特殊符号</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">flutter create project_name</code></p>
+<p><br /></p>
+
+<p><code class="highlighter-rouge">flutter doctor</code></p>
 
 <blockquote>
   <p>查看当前flutter版本及相关开发工具安装信息</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">flutter doctor</code></p>
+<p><br /></p>
+
+<p><code class="highlighter-rouge">flutter clean</code></p>
 
 <blockquote>
   <p>清理工作区, 知情理当前项目的</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">flutter clean</code></p>
+<p><br /></p>
+
+<p><code class="highlighter-rouge">flutter devices</code></p>
 
 <blockquote>
   <p>查看当前设备</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">flutter devices</code></p>
+<p><br /></p>
+
+<p><code class="highlighter-rouge">flutter format .</code></p>
 
 <blockquote>
   <p>格式化文件 <code class="highlighter-rouge">.</code> 表示全部文件, 可以是单个文件</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">flutter format .</code></p>
+<p><br /></p>
+
+<p><code class="highlighter-rouge">flutter pub get</code></p>
 
 <blockquote>
   <p>修改 pubspec.yaml后, 拉依赖</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">flutter pub get</code></p>
+<p><br /></p>
+
+<p><code class="highlighter-rouge">flutter upgrade</code></p>
 
 <blockquote>
   <p>更新 flutter</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">flutter upgrade</code></p>
+<p><br /></p>
+
+<p><code class="highlighter-rouge">flutter run</code></p>
 
 <blockquote>
   <p>运行 flutter 项目, 后面可以跟一些可选参数</p>
@@ -115,7 +133,7 @@
   </blockquote>
 </blockquote>
 
-<p><code class="highlighter-rouge">flutter run</code></p>
+<p><br /></p>
 
   </div><a class="u-url" href="/command/" hidden></a>
 </article>
