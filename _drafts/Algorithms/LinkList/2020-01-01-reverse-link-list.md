@@ -1,26 +1,45 @@
 ---
 layout: post
-title: 反转单链表
+title: 反转链表
 categories: Algorithms, 链表
 ---
 
+# [剑指 Offer 24. 反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/)
 
 ```
-class Node {
+class ListNode {
     int val;
-    Node next;
+    ListNode next;
 }
 
-Node reverseList(Node head) {
-    if (head == null) return;
+ListNode reverseList(ListNode head) {
+    if (head == null || head.next == null) return head;
 
-    Node cur = head;
+    ListNode cur = head, pre = null;
 
     while(cur != null) {
-        Node tmp = cur.next;
-        cur.next = head;
-        head.next = cur;
+        ListNode tmp = cur.next;
+        cur.next = pre;
+        pre = cur;
         cur = tmp;
     }
+    return pre;
 }
+
+```
+
+```
+
+ListNode reverseList(ListNode head) {
+    if (head == null || head.next == null) return head;
+    return _reverse(head, null);
+}
+
+ListNode _reverse(ListNode cur, ListNode pre) {
+    if (cur == null) return pre;
+    ListNode res = _reverse(cur.next, cur);
+    cur.next = pre;
+    return res;
+}
+
 ```
