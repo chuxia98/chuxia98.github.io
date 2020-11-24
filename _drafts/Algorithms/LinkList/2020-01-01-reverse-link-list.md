@@ -11,7 +11,10 @@ class ListNode {
     int val;
     ListNode next;
 }
+```
 
+```
+// 迭代
 ListNode reverseList(ListNode head) {
     if (head == null || head.next == null) return head;
 
@@ -29,7 +32,7 @@ ListNode reverseList(ListNode head) {
 ```
 
 ```
-
+// 递归
 ListNode reverseList(ListNode head) {
     if (head == null || head.next == null) return head;
     return _reverse(head, null);
