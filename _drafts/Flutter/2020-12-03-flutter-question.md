@@ -4,12 +4,16 @@ title: Flutter面试
 categories: Flutter
 ---
 
-Debug构建 `JIT` (just in time)
-Release/Profile `AOT` (Ahead of time)
+# Flutter 两种编译方式
+
+Debug构建 `JIT` (Just In Time) 即时编译
+
+Release/Profile `AOT` (Ahead Of Time) 事前编译
 
 const/final区别
 
 StatefulWidget 生命周期
+
 	initState
 	build
 	didUpdateWidget
@@ -18,7 +22,9 @@ StatefulWidget 生命周期
 	dispose
 
     context => _element;
+
 StatefulWidget 触发`build`的方式
+
     setState()
     _element.markNeedsBuild();
     _element.owner.scheduleBuildFor(this);
