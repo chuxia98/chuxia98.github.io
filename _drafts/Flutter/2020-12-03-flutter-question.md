@@ -10,9 +10,9 @@ Debug构建 `JIT` (Just In Time) 即时编译
 
 Release/Profile `AOT` (Ahead Of Time) 事前编译
 
-const/final区别
+# const/final区别
 
-StatefulWidget 生命周期
+# StatefulWidget 生命周期
 
 	initState
 	build
@@ -23,7 +23,7 @@ StatefulWidget 生命周期
 
     context => _element;
 
-StatefulWidget 触发`build`的方式
+# StatefulWidget 触发`build`的方式
 
     setState()
     _element.markNeedsBuild();
