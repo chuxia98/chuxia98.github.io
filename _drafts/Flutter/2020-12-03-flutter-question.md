@@ -55,6 +55,7 @@ categories: Flutter
 ### PlatformChannel 运行在那个县城
 
 	BasicMessageChannel / MethodChannel / EventChannel 原理
+	channel 调用是异步的
 	dart 调用 channel 参数 decode 调用 c++,
 	c++调用 原生
  
