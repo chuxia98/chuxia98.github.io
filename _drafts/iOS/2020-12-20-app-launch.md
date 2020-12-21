@@ -27,4 +27,5 @@ categories: iOS
 
 ### 查看 APP 启动耗时
     * main() 启动耗时
+    
         Product -> Scheme -> Edit Scheme -> Run -> Argumets -> Enviromment Variables 设置 DYLD_PRINT_STATISTICS = YES
