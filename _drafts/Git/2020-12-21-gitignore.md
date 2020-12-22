@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git
-categories: queue
+categories: git
 ---
 
 
