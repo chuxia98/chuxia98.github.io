@@ -1,8 +1,20 @@
 
+## release 分支
+  1.2  2020/11
+  1.3  2021/03_cn
+  1.4  2021/05_cn
 
-## 删除pubspec.ymal 中的非china依赖
+## iOS运行 删除pubspec.ymal 中的非china依赖
 
 dart scripts/cli/cli.dart preProcessPubspec china
+
+
+## 国际化脚本
+
+make Makefile import_translations
+
+## 格式化翻译代码
+dartfmt -w ./localizations_sdk
 
 ## 
 
