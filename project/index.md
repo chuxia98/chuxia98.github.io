@@ -36,6 +36,12 @@ iOS 项目
 
 [EIGHTEEN](https://apps.apple.com/cn/app/id1147642072)
 
+其他
+
+日本市场
+[演歌](https://apps.apple.com/jp/app/id1557597339)
+
+
 <!-- <details>
 <summary>简介</summary>
 
