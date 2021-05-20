@@ -13,7 +13,12 @@ dart scripts/cli/cli.dart preProcessPubspec china
 
 make Makefile import_translations
 
+./scripts/cli/translations/automation.sh import-and-generate-dart
+
+make import_translations
+
 ## 格式化翻译代码
+
 dartfmt -w ./localizations_sdk
 
 ## 
