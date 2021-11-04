@@ -17,3 +17,8 @@ jarsigner -verbose -keystore #签名文件# -signedjar #target#.apk #source#.apk
 keytool -list -v -keystore key.keystore
 ```
 
+## 获取Android apk 签名信息
+
+```
+keytool -printcert -jarfile release.apk
+```
