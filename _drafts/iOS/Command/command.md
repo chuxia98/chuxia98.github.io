@@ -29,4 +29,5 @@ $ xcodebuild archive -project Runner.xcodeproj -target "My BMW"
 ```
 
 ### 列出可用的 scheme
+
 xcodebuild -list 
