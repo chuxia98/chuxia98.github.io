@@ -32,3 +32,15 @@ $ git tag -d v1.4
 Deleted tag 'v1.4-lw' 
 
 ```
+
+
+
+### git worktree
+
+git worktree add ../dir branchName
+git worktree remove branchName
+
+
+### git archive
+
+git archive --format tar.gz --output "./output.tar.gz" master
