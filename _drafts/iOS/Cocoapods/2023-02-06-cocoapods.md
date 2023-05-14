@@ -10,7 +10,7 @@ pod trunk register 875390797@qq.com "chuxia98" --verbose
 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
 
 # set url
-git remote set-url origin https://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@github.com/chuxia98/OFESDK.git/
+git remote set-url origin https://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@github.com/chuxia98/demo.git/
 git remote set-url origin https://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@github.com/xiaYingwudi/demoPodProject.git/
 
 # 列出 origin url

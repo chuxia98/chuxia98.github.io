@@ -23,6 +23,8 @@ $ git tag
 v0.1
 v1.3
 v1.4
+
+$ git push origin --tags
 ```
 
 删除`tag`
