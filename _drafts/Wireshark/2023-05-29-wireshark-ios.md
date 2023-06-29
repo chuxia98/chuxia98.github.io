@@ -41,3 +41,20 @@ Intel: rvictl
 
 `ssl.handshake.type eq 1` # 过滤https
 `tcp.port == 443` # 过滤https的数据包`
+
+# http://hk.javashuo.com/article/p-qdzkoczj-ed.html
+
+
+TCP 3 次握手
+SYN
+SYN, ACK
+ACK
+
+TLS 7 次握手
+Client hello
+Server hello
+Certificate, Server Key Exchange, Server Hello Done
+Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message
+Client Cliper Spec, Encrypted Handshake Message
+
+# https://www.onmpw.com/d/1683815198566923531.html
