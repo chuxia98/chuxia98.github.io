@@ -17,13 +17,13 @@ xcodebuild -project Runner.xcodeproj -target universalchina  -configuration �
 
 xcodebuild -project "$project_name" -target "$target_name" -configuration "$configuration" -sdk iphoneos build CODE_SIGN_IDENTITY="$codeSignIdentity" PROVISIONING_PROFILE="$provision_UUID"
 
-$ xcodebuild -project Runner.xcodeproj -target "My BMW" -configuration Debug-universalchina -sdk iphoneos build CODE_SIGN_IDENTITY="$codeSignIdentity" PROVISIONING_PROFILE="$provision_UUID"
+$ xcodebuild -project Runner.xcodeproj -target "[PROJECT_NAME]" -configuration Debug-universalchina -sdk iphoneos build CODE_SIGN_IDENTITY="$codeSignIdentity" PROVISIONING_PROFILE="$provision_UUID"
 
 /// clean
 $ xcodebuild clean -project Runner.xcodeproj -configuration ${CONFIGURATION} -alltargets
 
 $ xcodebuild archive -project Runner.xcodeproj -scheme universalchina -archivePath ~/Desktop/Alipay.xcarchive
-$ xcodebuild archive -project Runner.xcodeproj -target "My BMW" 
+$ xcodebuild archive -project Runner.xcodeproj -target "[PROJECT_NAME]" 
 
 
 ```

@@ -5,13 +5,13 @@
 pod trunk me
 
 # 注册
-pod trunk register 875390797@qq.com "chuxia98" --verbose
+pod trunk register example@qq.com "[name]" --verbose
 
 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
 
 # set url
-git remote set-url origin https://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@github.com/chuxia98/demo.git/
-git remote set-url origin https://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@github.com/xiaYingwudi/demoPodProject.git/
+git remote set-url origin https://xx@github.com/chuxia98/demo.git/
+git remote set-url origin https://xxx@github.com/[author]/demoPodProject.git/
 
 # 列出 origin url
 git remote -v
